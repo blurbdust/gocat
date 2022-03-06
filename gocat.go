@@ -232,10 +232,10 @@ func callback(id uint32, hcCtx *C.hashcat_ctx_t, wrapper unsafe.Pointer, buf uns
 		payload = logHashcatAction(id, "Sorting salts...")
 	case C.EVENT_HASHLIST_SORT_SALT_POST:
 		payload = logHashcatAction(id, "Sorted salts...")
-	case C.EVENT_BACKEND_SESSION_PRE:
-		payload = logHashcatAction(id, "Initializing device kernels and memory")
-	case C.EVENT_BACKEND_SESSION_POST:
-		payload = logHashcatAction(id, "Initialized device kernels and memory")
+//	case C.EVENT_BACKEND_SESSION_PRE:
+//		payload = logHashcatAction(id, "Initializing device kernels and memory")
+//	case C.EVENT_BACKEND_SESSION_POST:
+//		payload = logHashcatAction(id, "Initialized device kernels and memory")
 	case C.EVENT_AUTOTUNE_STARTING:
 		payload = logHashcatAction(id, "Starting Autotune threads")
 	case C.EVENT_AUTOTUNE_FINISHED:
