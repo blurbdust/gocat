@@ -3,8 +3,8 @@ package gocat
 /*
 #cgo CFLAGS: -I/usr/local/include/hashcat -std=c99 -Wall -O0 -g
 #cgo linux CFLAGS: -D_GNU_SOURCE
-#cgo linux LDFLAGS: -L/usr/local/lib -lhashcat.6.1.1
-#cgo darwin LDFLAGS: -L/usr/local/lib -lhashcat.6.1.1
+#cgo linux LDFLAGS: -L/usr/local/lib -lhashcat.6.2.5
+#cgo darwin LDFLAGS: -L/usr/local/lib -lhashcat.6.2.5
 
 #include "wrapper.h"
 */
