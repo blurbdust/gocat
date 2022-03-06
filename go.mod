@@ -1,4 +1,4 @@
-module github.com/fireeye/gocat/v6.2.5
+module github.com/blurbdust/gocat/v6.2.5
 
 go 1.12
 
