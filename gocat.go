@@ -17,7 +17,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/fireeye/gocat/hcargp"
+	"github.com/fireeye/gocat/v6/hcargp"
 )
 
 var (
@@ -99,6 +99,16 @@ type Hashcat struct {
 	// these must be free'd
 	executablePath *C.char
 	sharedPath     *C.char
+}
+
+// New creates a context that can be reused to crack passwords.
+func ValidateHashes(filename string, filetype uint32) (TaskInformationPayload, error) {
+	payload := TaskInformationPayload{
+                        NumHashes:       uint32(1),
+                        NumHashesUnique: uint32(1),
+                        NumSalts:        uint32(1),
+                }
+	return payload, nil
 }
 
 // New creates a context that can be reused to crack passwords.
