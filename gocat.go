@@ -102,11 +102,12 @@ type Hashcat struct {
 }
 
 // New creates a context that can be reused to crack passwords.
-func ValidateHashes(filename string, filetype uint32) (TaskInformationPayload, error) {
-	payload := TaskInformationPayload{
-                        NumHashes:       uint32(1),
-                        NumHashesUnique: uint32(1),
-                        NumSalts:        uint32(1),
+func ValidateHashes(filename string, filetype uint32) (vresults, error) {
+	payload := vrestults{
+			Errors:			nil
+                        NumHashes:		uint32(1),
+                        NumHashesUnique:	uint32(1),
+                        NumSalts:		uint32(1),
                 }
 	return payload, nil
 }

@@ -33,6 +33,14 @@ type TaskInformationPayload struct {
 	NumSalts        uint32
 }
 
+// vresults includes information about the task that hashcat is getting ready to process. This includes deduplicated hashes, etc.
+type vresults struct {
+	Errors		error
+	NumHashes       uint32
+	NumHashesUnique uint32
+	NumSalts        uint32
+}
+
 // ActionPayload defines the structure of a generic hashcat event and sent to the user via the callback.
 // An example of this would be the numerous PRE/POST events.
 type ActionPayload struct {
